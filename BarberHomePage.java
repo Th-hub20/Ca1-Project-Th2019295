@@ -103,7 +103,7 @@ public class BarberHomePage extends JFrame implements ActionListener {
         
         try {
             //Making connection with database
-            Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/BarberShopDB;create=true");  
+            Connection conn = DriverManager.getConnection("jdbc:mysql://apontejaj.com:3306/Willian_2019306?useSSL=false", "Willian_2019306", "2019306");  
             ResultSet rs;
             //Query to have all the appointment's data of barber(user)
             PreparedStatement st = conn.prepareStatement("SELECT * FROM APPOINTMENTS WHERE BARBERNAME LIKE ?");
